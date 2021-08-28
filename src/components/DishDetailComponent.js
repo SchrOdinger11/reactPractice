@@ -4,15 +4,18 @@ import { Card, CardImg, CardBody, CardText, CardTitle } from 'reactstrap';
 
 class DishDetail extends Component {
 
+    // function to change to date
+
   convertDateToCommentDateFormat(timestamp) {
     const date = new Date(timestamp);
     return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
   }
+//   function to render dish
 
   renderDish(dish) {
     return (
       <Card>
-        <CardImg top src={dish.image} alt={dish.name} />
+        <CardImg  src={dish.image} alt={dish.name} />
         <CardBody>
           <CardTitle>{dish.name}</CardTitle>
           <CardText>{dish.description}</CardText>
@@ -20,7 +23,7 @@ class DishDetail extends Component {
       </Card>
     );
   }
-
+// function to render comments
   renderComments(comments) {
     if (comments == null || comments.length === 0) {
       return (
@@ -47,6 +50,8 @@ class DishDetail extends Component {
     );
   }
 
+//   final render function
+
   render() {
     if (this.props.dish != null) {
       return (
@@ -61,7 +66,7 @@ class DishDetail extends Component {
       );
     }
     else {
-      return (
+      return ( 
         <div></div>
       );
     }

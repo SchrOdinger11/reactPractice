@@ -1,45 +1,37 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { Component } from 'react';
-import {Navbar, NavbarBrand} from 'reactstrap';
-import Menu from './components/MenuComponent'; 
-import {DISHES} from './shared/dishes';
+
+import Main from './components/MainComponent'; 
+
 
 //function App() {
 class App extends Component{
-  constructor(props){
-    super(props);
-    this.state={
-      dishes:DISHES
-    };
-  }
+ 
   render(){
   return (
-    <div >
-      <Navbar dark color="primary">
-        <div className="container">
-          <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
-        </div>
-      </Navbar>
-      <Menu dishes={this.state.dishes}/>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn fReact
-        </a>
-      </header> */}
-    </div>
+    <div className="App">
+    <Main />
+  </div>
   );
 }
 }
 
 
 export default App;
+
+
+      // {/* /* <header className="App-header">
+      //   <img src={logo} className="App-logo" alt="logo" />
+      //   <p>
+      //     Edit <code>src/App.js</code> and save to reload.
+      //   </p>
+      //   <a
+      //     className="App-link"
+      //     href="https://reactjs.org"
+      //     target="_blank"
+      //     rel="noopener noreferrer"
+      //   >
+      //     Learn fReact
+      //   </a>
+      // </header> */ */}

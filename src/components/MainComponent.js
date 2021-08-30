@@ -18,7 +18,7 @@ class Main extends Component {
     this.setState({ selectedDish: dishId});
   }
 
-  render() {
+  render() { 
     return (
       <div>
         <Navbar dark color="primary">
